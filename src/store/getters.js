@@ -3,5 +3,6 @@ export const getters = {
     username:state=> state.user.username,
     avatar:state=> state.user.avatar,
     menus:state=> state.user.menus,
-    tags:state=>state.user.tagsView
+    tags:state=>state.user.tagsView,
+    data1:state=> state.home.data1,
 }

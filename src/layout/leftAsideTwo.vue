@@ -1,12 +1,5 @@
 <template>
   <div>
-    <template v-if="item && !item.child">
-      <el-menu-item :index="item.desc">
-        <i class="el-icon-menu"></i>
-        <span slot="title">{{ item.name }}</span>
-      </el-menu-item>
-    </template>
-
     <template v-if="item && item.child">
       <el-submenu :index="item.icon">
         <template slot="title">

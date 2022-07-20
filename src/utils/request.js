@@ -24,5 +24,13 @@ instance.interceptors.response.use(function (response) {
     // 对响应错误做点什么
     return Promise.reject(error);
   });
+  // 统一了传参处理 
+ const request = (options) => { 
+  if (options.method.toLowerCase() === 'get') { 
+  options.params = options.data || {} 
+  } 
+  return instance(options) 
+  } 
 
-export default instance;
+
+export default request;

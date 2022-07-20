@@ -45,7 +45,7 @@ const routes = [
         component: ()=>import('../views/goods/category.vue'), 
         meta:{
           title:'分类管理',
-          path:"category/list"
+          path:"/category/list"
         }   
       },
       {
@@ -77,7 +77,6 @@ const routes = [
       children:[
         {
           path: '/user/list',
-          name: 'user',
           component: ()=>import('../views/user/user.vue'),  
           meta:{
             title:'用户管理',
@@ -86,7 +85,6 @@ const routes = [
         },
         {
           path: '/level/list',
-          name: 'category',
           component: ()=>import('../views/user/level.vue'), 
           meta:{
             title:'会员等级',

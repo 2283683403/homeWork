@@ -36,10 +36,14 @@ export default{
       })
       if(aa == -1){
         state.tagsView.push(tags)
-        console.log(state.tagsView);
         setItem('tagsView',state.tagsView)
       }
 
+    },
+    //删除tagsview
+    delTagsView(state,ind){
+      state.tagsView=state.tagsView.splice(ind,1)
+      setItem('tagsView',state.tagsView)
     }
   },
   actions:{
@@ -64,6 +68,9 @@ export default{
     },
     setTags({commit},tags){      //存储tagsView
       commit('setTagsView',tags)
+    },
+    delTag({commit},index){    //删除tagsview
+       commit('delTagsView',index)
     }
   }
 }
